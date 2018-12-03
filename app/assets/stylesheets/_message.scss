@@ -1,0 +1,50 @@
+@import '_variable';
+
+.messages{
+  background-color: $chat-body-color-gray;
+  height: calc(100vh - 190px);
+  padding: 46px 40px 0;
+  box-sizing: border-box;
+  .message{
+    margin-bottom: 40px;
+    .heigher-message{
+      display: flex;
+      &__name{
+        font-size: 16px;
+        color: $chat-font-color-light-black;
+        font-weight: bold;
+      }
+      &__date{
+        font-size: 12px;
+        color: $chat-members-date-color-light-black;
+        padding-left: 10px;
+      }
+    }
+    .lower-message{
+      font-size: 14px;
+      color: $chat-font-color-light-black;
+      padding-top: 10px;
+    }
+  }
+  .message2{
+    margin-bottom: 40px;
+    .heigher-message2{
+      display: flex;
+      &__name{
+        font-size: 16px;
+        color: $chat-font-color-light-black;
+        font-weight: bold;
+      }
+      &__date{
+        font-size: 12px;
+        color: $chat-members-date-color-light-black;
+        padding-left: 10px;
+      }
+    }
+    .lower-message2{
+      font-size: 14px;
+      color: $chat-font-color-light-black;
+      padding-top: 10px;
+    }
+  }
+}
