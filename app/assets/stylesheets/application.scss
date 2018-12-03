@@ -1,0 +1,132 @@
+@import '_reset.scss';
+@import 'Font-Awesome';
+@import '_variable';
+@import '_notice';
+@import '_message';
+
+.wrapper{
+  display: flex;
+}
+
+.side-bar{
+  width:300px;
+  box-sizing: border-box;
+  .header{
+    background-color: $sife-bar-header-color-black;
+    height: 100px;
+    line-height: 100px;
+    color: $side-bar-font-color-white;
+    padding: 0 20px;
+    &__name{
+      font-weight: bold;
+      font-size: 16px;
+      display: inline-block;
+    }
+    &__lists{
+      float: right;
+      a{
+        color: $side-bar-font-color-white;
+        text-decoration: none;
+      }
+    }
+  }
+  .groups{
+    background-color: $side-bar-groups-color-light-black;
+    height: calc(100vh - 100px);
+    padding: 20px 20px;
+    box-sizing: border-box;
+    .group{
+      &__name{
+        font-size: 15px;
+        color: $side-bar-font-color-white;
+      }
+      &__text{
+        font-size: 11px;
+        color: $side-bar-font-color-white;
+        margin-top: 5px;
+        margin-bottom: 40px;
+      }
+      &__name2{
+        font-size: 15px;
+        color: $side-bar-font-color-white;
+      }
+      &__text2{
+        font-size: 11px;
+        color: $side-bar-font-color-white;
+        margin-top: 5px;
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
+
+
+.chat{
+  width: calc(100% - 300px);
+  .header{
+    height: 100px;
+    padding: 0 40px;
+    .left-header{
+      float: left;
+      &__title{
+        color: $chat-header-color-white;
+        font-size: 20px;
+        margin-top: 35px;
+      }
+      &__members{
+          color: $chat-members-date-color-light-black;
+          font-size: 12px;
+          list-style: none;
+          display: flex;
+      }
+    }
+    .right-header{
+      &__button{
+        float: right;
+        margin-top: 28px;
+        border: solid;
+        border-width: 1px;
+        color: $button-color-blue;
+        padding: 0 20px;
+        box-sizing: border-box;
+        height: 40px;
+        line-height: 40px;
+        a{
+          color: $button-color-blue;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  .form{
+    box-sizing: border-box;
+    height: 90px;
+    font-size: 16px;
+    color: $form-font-color-light-black;
+    background-color: $form-color-light-gray;
+    padding: 20px 40px 20px 40px;
+    display: flex;
+    &__message{
+      box-sizing: border-box;
+      height: 50px;
+      width: calc(100% - 150px);
+      padding-left: 10px;
+      border: none;
+    }
+    &__mask{
+      box-sizing: border-box;
+      padding-right: 10px;
+      background-color: $form-icon-color-white;
+      line-height: 50px;
+      font-size: 20px;
+    }
+    &__button{
+      background-color: $button-color-blue;
+      color: $form-button-font-color-white;
+      font-size: 16px;
+      height: 50px;
+      padding: 0 30px;
+      margin-left: 15px;
+    }
+  }
+}
