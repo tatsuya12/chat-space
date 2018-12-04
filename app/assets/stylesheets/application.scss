@@ -1,8 +1,9 @@
 @import '_reset.scss';
 @import 'Font-Awesome';
 @import '_variable';
-@import '_notice';
 @import '_message';
+@import 'user';
+@import 'flash';
 
 .wrapper{
   display: flex;
