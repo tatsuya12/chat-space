@@ -15,7 +15,7 @@
             .group__name
               = group.name
             .group__text
-              メッセージはまだありません。
+              = group.show_last_message
   .chat
     .header
       .left-header
@@ -31,28 +31,12 @@
           %a(href="")
             Edit
     .messages
-      .message
-        .heigher-message
-          .heigher-message__name
-            shirasu
-          .heigher-message__date
-            2018/12/02 06:27:07
-        .lower-message
-          .lower-message__content
-            お腹すいた
-      .message2
-        .heigher-message2
-          .heigher-message2__name
-            shirasu
-          .heigher-message2__date
-            2018/12/02 06:28:07
-        .lower-message2
-          .lower-message2__content
-            お腹すいた
+    = render @messages
     .form
-      %input.form__message(type="text" placeholder="type a message")
-      .form__mask
-        %label.form__mask__image(for="form_image")
-          =fa_icon'picture-o'
-          %input(type="file" id="form_image" style="display :none")
-      %input.form__button(type="submit" value="Send")
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message', type: 'text'
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do
+            = fa_icon 'picture-o', class: 'icon'
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'
