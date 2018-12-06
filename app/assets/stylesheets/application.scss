@@ -90,35 +90,40 @@
       }
     }
   }
-  .form{
+  .form {
+    background-color: $form-color-light-gray;
     box-sizing: border-box;
     height: 90px;
-    font-size: 16px;
-    color: $form-font-color-light-black;
-    background-color: $form-color-light-gray;
-    padding: 20px 40px 20px 40px;
-    display: flex;
-    &__message{
-      box-sizing: border-box;
+    padding: 20px 50px 20px 40px;
+    &__message {
+      border: none;
+      float: left;
       height: 50px;
       width: calc(100% - 150px);
-      padding-left: 10px;
-      border: none;
     }
-    &__mask{
-      box-sizing: border-box;
-      padding-right: 10px;
+    &__mask {
       background-color: $form-icon-color-white;
-      line-height: 50px;
-      font-size: 20px;
+      float: left;
+      height: 50px;
+      padding-right: 10px;
+      &__image {
+        font-size: 20px;
+        line-height: 50px;
+      }
+      .hidden {
+        display: none;
+      }
     }
-    &__button{
+    &__submit {
       background-color: $button-color-blue;
+      border: none;
       color: $form-button-font-color-white;
+      float: right;
       font-size: 16px;
       height: 50px;
-      padding: 0 30px;
       margin-left: 15px;
+      padding: 0 30px;
     }
   }
 }
+

@@ -1,0 +1,12 @@
+.message
+  .heigher-message
+    .heigher-message__name
+      = message.user.name
+    .heigher-message__date
+      / = format_posted_time(message.created_at)
+  .lower-message
+    - if message.content.present?
+      %p.lower-message__content
+        = message.content
+    = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
+
