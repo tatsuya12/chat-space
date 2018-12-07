@@ -5,53 +5,12 @@
 @import 'user';
 @import 'flash';
 @import 'group';
+@import 'side_bar';
+
 
 .wrapper{
   display: flex;
 }
-
-.side-bar{
-  width:300px;
-  box-sizing: border-box;
-  .header{
-    background-color: $sife-bar-header-color-black;
-    height: 100px;
-    line-height: 100px;
-    color: $side-bar-font-color-white;
-    padding: 0 20px;
-    &__name{
-      font-weight: bold;
-      font-size: 16px;
-      display: inline-block;
-    }
-    &__lists{
-      float: right;
-      a{
-        color: $side-bar-font-color-white;
-        text-decoration: none;
-      }
-    }
-  }
-  .groups{
-    background-color: $side-bar-groups-color-light-black;
-    height: calc(100vh - 100px);
-    padding: 20px 20px;
-    box-sizing: border-box;
-    .group{
-      &__name{
-        font-size: 15px;
-        color: $side-bar-font-color-white;
-      }
-      &__text{
-        font-size: 11px;
-        color: $side-bar-font-color-white;
-        margin-top: 5px;
-        margin-bottom: 40px;
-      }
-    }
-  }
-}
-
 
 .chat{
   width: calc(100% - 300px);
