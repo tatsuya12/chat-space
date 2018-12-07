@@ -9,7 +9,8 @@
           %li.member
             Members :
           %li.member
-            = current_user.name
+            - @group.users.each do |member|
+              = member.name
       .right-header
         .right-header__button
           %a(href="")
